@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Horários</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-blue-500 text-white p-4">
+        <h1 class="text-center text-2xl">Gerenciador de Horários Escolares</h1>
+    </header>
+
+    <div class="container mx-auto mt-6 flex space-x-6">
+        <!-- Formulário para Cadastrar Horário -->
+        <div class="w-1/3 bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold mb-4">Cadastrar Horário</h2>
+        <form id="scheduleForm" class="space-y-4">
+            <div>
+            <label for="turma" class="block text-sm">Turma:</label>
+            <input type="text" id="turma" name="turma" class="w-full p-2 border rounded" required>
+            </div>
+            <div>
+            <label for="turno" class="block text-sm">Turno:</label>
+            <select id="turno" name="turno" class="w-full p-2 border rounded" required>
+                <option value="Manhã">Manhã</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noite">Noite</option>
+            </select>
+            </div>
+            <div>
+            <label for="curso" class="block text-sm">Curso:</label>
+            <input type="text" id="curso" name="curso" class="w-full p-2 border rounded" required>
+            </div>
+            <div>
+            <label for="diaSemana" class="block text-sm">Dia da Semana:</label>
+            <select id="diaSemana" name="diaSemana" class="w-full p-2 border rounded" required>
+                <option value="Segunda">Segunda</option>
+                <option value="Terça">Terça</option>
+                <option value="Quarta">Quarta</option>
+                <option value="Quinta">Quinta</option>
+                <option value="Sexta">Sexta</option>
+            </select>
+            </div>
+            <div>
+            <label for="professor" class="block text-sm">Professor(a):</label>
+            <input type="text" id="professor" name="professor" class="w-full p-2 border rounded" required>
+            </div>
+            <div>
+            <label for="materia" class="block text-sm">Matéria:</label>
+            <input type="text" id="materia" name="materia" class="w-full p-2 border rounded" required>
+            </div>
+            <div>
+            <label for="inicio" class="block text-sm">Horário de Início:</label>
+            <input type="time" id="inicio" name="inicio" class="w-full p-2 border rounded" required>
+            </div>
+            <div>
+            <label for="termino" class="block text-sm">Horário de Término:</label>
+            <input type="time" id="termino" name="termino" class="w-full p-2 border rounded" required>
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Salvar Horário</button>
+        </form>
+        </div>
+
+        <!-- Sidebar com Turmas Cadastradas -->
+        <aside class="w-1/3 bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold mb-4">Turmas Cadastradas</h2>
+        <ul id="classList" class="space-y-2">
+            <!-- As turmas cadastradas vão aparecer aqui -->
+        </ul>
+        <button id="viewSchedules" class="mt-4 w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">
+            Ver Horários
+        </button>
+        </aside>
+    </div>
+
+    <script src="horario/js/cadastro.js"></script>
+</body>
+</html>

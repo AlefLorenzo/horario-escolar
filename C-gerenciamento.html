@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Horários</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-blue-500 text-white p-4">
+        <h1 class="text-center text-2xl">Gerenciador de Horários Escolares (Gerenciador)</h1>
+        <button id="logoutBtn" class="absolute top-4 right-4 bg-red-500 text-white py-2 px-4 rounded">Logout</button>
+    </header>
+
+    <!-- Conteúdo da página continua igual... -->
+    
+    <script src="horario/js/cadastro.js"></script>
+    <script>
+        // Verifica se o usuário é um gerenciador
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (!currentUser || currentUser.role !== 'gerenciador') {
+        alert('Acesso negado. Você não tem permissão para acessar esta página.');
+        window.location.href = 'login.html';
+        }
+
+        // Função de logout
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+        localStorage.removeItem('currentUser');
+        window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

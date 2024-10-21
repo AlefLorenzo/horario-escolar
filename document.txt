@@ -1,0 +1,40 @@
+Documentação do Gerenciador e Editor de Horários Escolares
+1. Descrição do Projeto
+Este projeto é um Gerenciador e Editor de Horários Escolares que permite aos professores cadastrar horários das aulas. Ele foi desenvolvido utilizando HTML, CSS, JavaScript  Bootstrap. Os dados são armazenados localmente no navegador utilizando a API do localStorage.
+
+O principal objetivo do sistema é permitir que os professores gerenciem e organizem os horários das aulas, cadastrando informações como turma, turno, curso, professor, matéria, além do dia da semana e os horários de início e término das aulas.
+
+2. Funcionalidades
+Cadastro de Horários: Os professores podem cadastrar os horários das turmas informando detalhes como o nome da turma, turno, curso, professor, matéria, dia da semana e horário de início e término.
+
+Armazenamento Local: Os dados são armazenados no localStorage do navegador, garantindo que, mesmo após fechar a página, as informações cadastradas estarão disponíveis quando o usuário retornar.
+
+Exibição de Horários: Os horários cadastrados são exibidos em uma tabela organizada com colunas para cada atributo, permitindo que o professor visualize de maneira clara todos os detalhes.
+
+Edição e Exclusão: O sistema permite que o professor edite ou exclua os horários cadastrados, mantendo a flexibilidade para ajustar mudanças nos horários.
+
+Navegação Simples: Há um botão "Voltar" que redireciona o professor diretamente para a página de cadastro, permitindo a fácil navegação entre as telas de cadastro e visualização de horários.
+
+Logout e Controle de Acesso: O sistema possui uma função de logout que limpa o acesso do usuário ao sistema e requer um novo login para acessá-lo novamente.
+
+3. Como Funciona
+Página de Cadastro:
+
+O professor preenche o formulário com as informações do horário.
+O formulário contém validações para garantir que todos os campos sejam preenchidos.
+Ao submeter, as informações são salvas no localStorage e são exibidas automaticamente na tabela de horários cadastrados.
+Página de Visualização:
+
+Exibe os horários cadastrados em uma tabela com as colunas organizadas (turma, turno, curso, professor, matéria, dia da semana, horário de início e término).
+Botões de edição e exclusão permitem a manipulação dos horários.
+Logout e Acesso:
+
+Ao clicar no botão de logout, o usuário é redirecionado para a tela de login, e a sessão é encerrada.
+4. Objetivo e Utilidade
+O Gerenciador de Horários Escolares é projetado para ser uma solução prática para o controle de horários das aulas, simplificando o processo de cadastro e visualização para os professores. Ele pode ser utilizado em escolas e universidades, ajudando a organizar melhor os cronogramas e evitar conflitos de horários. Por ser armazenado no localStorage, ele é voltado para uso em pequenas aplicações ou testes locais, mas pode ser adaptado para um sistema de back-end em escala maior no futuro.
+
+5. Como Utilizar
+Acesse a página de Cadastro e insira as informações necessárias sobre a turma e o horário.
+Após salvar, vá para a página de Horários Cadastrados para visualizar os dados.
+Use as funções de Editar ou Excluir conforme necessário.
+Utilize o botão de Logout para sair da aplicação e garantir a segurança dos dados.

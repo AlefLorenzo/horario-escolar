@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horários Cadastrados</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-blue-500 text-white p-4">
+        <h1 class="text-center text-2xl">Horários Cadastrados</h1>
+    </header>
+
+    <div class="container mx-auto mt-6">
+        <table class="w-full table-auto bg-white shadow-md rounded-lg">
+        <thead>
+            <tr>
+            <th class="border px-4 py-2">Turma</th>
+            <th class="border px-4 py-2">Turno</th>
+            <th class="border px-4 py-2">Curso</th>
+            <th class="border px-4 py-2">Dia</th>
+            <th class="border px-4 py-2">Professor</th>
+            <th class="border px-4 py-2">Matéria</th>
+            <th class="border px-4 py-2">Início</th>
+            <th class="border px-4 py-2">Término</th>
+            </tr>
+        </thead>
+        <tbody id="scheduleTable">
+            <!-- Os horários cadastrados vão aparecer aqui -->
+        </tbody>
+        </table>
+        <button id="goBack" class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Voltar</button>
+    </div>
+
+    <script src="horario/js/horarios.js"></script>
+</body>
+</html>
